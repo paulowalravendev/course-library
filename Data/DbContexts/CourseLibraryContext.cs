@@ -1,4 +1,3 @@
-using Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data;

@@ -1,4 +1,3 @@
-using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -12,6 +11,9 @@ public class AuthorConfiguration : IEntityTypeConfiguration<Author>
             .HasMaxLength(50);
         
         builder.Property(p => p.LastName)
+            .HasMaxLength(50);
+        
+        builder.Property(p => p.MainCategory)
             .HasMaxLength(50);
     }
 }
