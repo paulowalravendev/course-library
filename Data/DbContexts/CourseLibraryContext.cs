@@ -8,8 +8,8 @@ public class CourseLibraryContext : DbContext
     {
     }
 
-    public DbSet<Author> Authors { get; set; }
-    public DbSet<Course> Courses { get; set; }
+    public DbSet<Author> Authors { get; set; } = null!;
+    public DbSet<Course> Courses { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,6 +31,7 @@ public class CourseLibraryContext : DbContext
                     break;
             }
         }
+
         return base.SaveChangesAsync(cancellationToken);
     }
 }
